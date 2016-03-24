@@ -4,6 +4,7 @@ import urllib2
 import urllib
 import datetime
 import codecs
+import os
 
 d = datetime.datetime.today()
 f = codecs.open("write.html","w",'utf-8')
@@ -83,7 +84,7 @@ for n in range(1,10):
 f.write("</body>"+'\n')
 f.write("</html>"+'\n')
 f.close()
-
+os.system("open write.html")
     #for i in range(0,30):
     #    print img_list[i]
     #    print title_list[i]
