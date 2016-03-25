@@ -63,10 +63,10 @@ for n in range(1,10):
                         f.write("<a href=\""+"http://www.nicovideo.jp/"+str(href_list[j])+"\">"+str(title_list[j])+"</a>"+'\n')
                         f.write("<br>"+'\n')
                         #f.write(str(href_list[j])+'\n')
-                        print link
-                        print img_list[j]
-                        print title_list[j]
-                        print href_list[j]
+                        #print link
+                        #print img_list[j]
+                        #print title_list[j]
+                        #print href_list[j]
                     #elif str(d.day-1)+"日" in str(link):
                     #    f.write(str(link))
                     #    f.write(str(img_list[j]))
@@ -76,7 +76,7 @@ for n in range(1,10):
                     #    print img_list[j]
                     #    print title_list[j]
                     #    print href_list[j]
-            print j
+            #print j
             j += 1
         #del img_list[0]
         #del title_list[0]
