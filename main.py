@@ -1,3 +1,4 @@
+#! /usr/bin/ python
 # -*- coding: utf-8 -*-
 from bs4 import BeautifulSoup
 import urllib2
@@ -56,8 +57,9 @@ for n in range(1,10):
                 if str(d.month)+"月" in str(link):
                     if str(d.day)+"日" in str(link) or str(d.day-1)+"日" in str(link):
                         f.write("<img src=\""+str(img_list[j])+"\" width=100 height=100>"+'\n')
-                        f.write(str(link)+'\n')
-                        f.write("<a href=\""+"http://www.nicovideo.jp/"+str(href_list[j])+"\">"+str(title_list[j])+"</a>"+'\n')
+                        f.write(str(link).decode('utf-8')+'\n')
+                        f.write("<a href=\""+"http://www.nicovideo.jp/"+str(href_list[j]).decode('utf-8')+"\">")
+                        f.write(unicode(title_list[j])+"</a>"+'\n')
                         f.write("<br>"+'\n')
             j += 1
 f.write("</body>"+'\n')
