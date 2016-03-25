@@ -33,18 +33,15 @@ for n in range(1,10):
         str('ur')
         if "tn-skr" in ur:
             img_list.append(ur)
-            #print ur
     # 動画タイトルの取得
     for link in soup.find_all('a'):
         ur_2 = link.get('title')
         if ur_2:
-            #print ur_2
             title_list.append(ur_2)
         # 動画URL取得
         ur_3 = link.get('href')
         if "watch" in ur_3:
             if flag == 0:
-                #print "http://www.nicovideo.jp/"+ur_3
                 href_list.append(ur_3)
                 flag = 1
             elif flag == 1:
@@ -62,31 +59,9 @@ for n in range(1,10):
                         f.write(str(link)+'\n')
                         f.write("<a href=\""+"http://www.nicovideo.jp/"+str(href_list[j])+"\">"+str(title_list[j])+"</a>"+'\n')
                         f.write("<br>"+'\n')
-                        #f.write(str(href_list[j])+'\n')
-                        #print link
-                        #print img_list[j]
-                        #print title_list[j]
-                        #print href_list[j]
-                    #elif str(d.day-1)+"日" in str(link):
-                    #    f.write(str(link))
-                    #    f.write(str(img_list[j]))
-                    #    f.write(str(title_list))
-                    #    f.write(str(href_list[j]))
-                    #    print link
-                    #    print img_list[j]
-                    #    print title_list[j]
-                    #    print href_list[j]
-            #print j
             j += 1
-        #del img_list[0]
-        #del title_list[0]
-        #del href_list[0]
 f.write("</body>"+'\n')
 f.write("</html>"+'\n')
 f.close()
 os.system("open write.html")
-    #for i in range(0,30):
-    #    print img_list[i]
-    #    print title_list[i]
-    #    print href_list[i]
 
