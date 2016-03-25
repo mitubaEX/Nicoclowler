@@ -6,3 +6,6 @@
 
 ## 実行方法
 `python main.py`
+
+## 使用ライブラリ
+Beautiful Soup4
